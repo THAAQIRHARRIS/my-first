@@ -2,6 +2,23 @@
 <html lang="en">
 <head>
   <link rel="stylesheet" href="/Styels!!/Contact.css">
+  <script>
+    function determineContact()
+    { //fname,lname,subject,Number
+      var firstname = document.getElementById('fname').textContent;
+      var lastname = document.getElementById('lname').textContent;
+      var subject = document.getElementById('subject').textContent;
+      var Number = document.getElementById('Number').textContent;
+
+      if (firstname == '' && lastname == '' && Number == '' && subject == ''){
+        alert('please enter all field correctly')
+      }else{
+        alert('Thank you for your feedback')
+      }
+      
+
+    }
+  </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
@@ -39,7 +56,7 @@
               <label for="Number">Enter phone number</label>
               <input type="text" id="Number" name="phonenumber" placeholder="Your phone number..">
               <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
-              <input type="submit" value="Submit">
+              <button id='btnSubmit' onclick='determineContact()'>Submit</button>
             </form>
           </div>
         </div>

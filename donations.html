@@ -1,5 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+  <script>
+    function Donation(){
+        //adr,fname,city,email,ccnum,cname,expmonth,cvv,expyear
+    var firstname = document.getElementById('fname').textContent;
+  var adr = document.getElementById('adr').textContent;
+  var city = document.getElementById('city').textContent;
+  var email = document.getElementById('email').textContent;
+  var cname = document.getElementById('cname').textContent;
+  var expmonth = document.getElementById('expmonth').textContent;
+  var cvv = document.getElementById('cvv').textContent;
+  var ccnum = document.getElementById('ccnum').textContent;
+  var expyear = document.getElementById('expyear').textContent
+
+  if (firstname == '' && adr == '' && city == '' && email == '' && cname == '' && expmonth == '' && cvv == '' && ccnum == '' && expyear == '' ){
+    alert('please enter all field correctly')
+  }else{
+    alert('Thank you for your donation, hope isnt the last time ;)')
+  }
+    }
+</script>
 <head>
   <link rel="stylesheet" href="Styels!!/donations.css">
     <title>Donation</title>
@@ -59,7 +79,7 @@
       
               </div>
         
-              <input type="submit" value="Continue to checkout" class="btn">
+              <input type="submit" value="Continue to checkout" class="btn" onclick='Donation()'>
             </form>
           </div>
         </div>
