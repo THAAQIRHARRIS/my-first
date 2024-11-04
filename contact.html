@@ -3,8 +3,9 @@
 <head>
   <link rel="stylesheet" href="/Styels!!/Contact.css">
   <script>
-    function determineContact()
-    { //fname,lname,subject,Number
+    function determineContact(event){
+    event.preventDefault()
+    //fname,lname,subject,Number
       var firstname = document.getElementById('fname').textContent;
       var lastname = document.getElementById('lname').textContent;
       var subject = document.getElementById('subject').textContent;
@@ -14,6 +15,10 @@
         alert('please enter all field correctly')
       }else{
         alert('Thank you for your feedback')
+        firstname = '';
+        lastname = '';
+        Number = '';
+        subject = '';
       }
       
 
@@ -56,7 +61,7 @@
               <label for="Number">Enter phone number</label>
               <input type="text" id="Number" name="phonenumber" placeholder="Your phone number..">
               <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
-              <button id='btnSubmit' onclick='determineContact()'>Submit</button>
+              <button id='btnSubmit' onclick='determineContact(event)'>Submit</button>
             </form>
           </div>
         </div>

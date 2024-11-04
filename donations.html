@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <script>
-    function Donation(){
+    function Donation(event) {
+            event.preventDefault();
+    
+
         //adr,fname,city,email,ccnum,cname,expmonth,cvv,expyear
     var firstname = document.getElementById('fname').textContent;
   var adr = document.getElementById('adr').textContent;
@@ -17,6 +20,15 @@
     alert('please enter all field correctly')
   }else{
     alert('Thank you for your donation, hope isnt the last time ;)')
+    firstname = '' ;
+    adr = '';
+    city = '';
+    email = ''; 
+    cname = '' ;
+    expmonth = '';
+    cvv = '';
+    ccnum = '';
+    expyear = '';
   }
     }
 </script>
@@ -79,7 +91,7 @@
       
               </div>
         
-              <input type="submit" value="Continue to checkout" class="btn" onclick='Donation()'>
+              <input type="submit" value="Continue to checkout" class="btn" onclick='Donation(event)'>
             </form>
           </div>
         </div>
